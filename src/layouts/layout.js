@@ -78,19 +78,6 @@ const Layout = ({children}) => {
         <MDXProvider components={MDXComponents}>
           <GlobalStyle />
             <LayoutWrapper>
-              <LogoWrapper>
-                <LogoWrapperContent>
-                  <Link to="/">
-                    <Logo isDark={context.isDark} />
-                  </Link>
-                  <ReadingWrapper>
-                    <ReadingIndicator />
-                  </ReadingWrapper>
-                  <BackTopWrapper>
-                    <BackTop />
-                  </BackTopWrapper>
-                </LogoWrapperContent>
-              </LogoWrapper>
               <ChildrenWrapper>
                 <Header />
                   {children}

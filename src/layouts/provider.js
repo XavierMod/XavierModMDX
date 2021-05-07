@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export const myContext = React.createContext();
 
 const Provider = props => {
-  const [isDark, setTheme] = useState(false);
+  const [isDark, setTheme] = useState(true);
 
   return (
     <myContext.Provider value={{

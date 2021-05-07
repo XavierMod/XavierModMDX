@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import sharingLinkImage from "../images/sharing-link-pic.png";
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -33,7 +34,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={`Xavier Mod | Front-End Developer with UX/UI`}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
@@ -51,6 +52,10 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://www.xaviermod.com/${sharingLinkImage}`,
         },
         {
           name: `twitter:card`,

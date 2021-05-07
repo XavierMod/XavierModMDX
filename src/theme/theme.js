@@ -24,15 +24,15 @@ export const lightTheme = {
     },
     options: {
         max_layout_width: '1250px',
-        layout_padding: '20px'
+        layout_padding: '60px'
     }
 }
 export const darkTheme = {
     colors: {
-        mainBG: '#111217',
+        mainBG: '#0f0f0f',
         mainBG_lighter: '#1D2129',
         text: "#ffffff",
-        accent: "#E9DAAC",
+        accent: "#dbdbdb",
         paragraphColor: 'white',
         accentSecondary: "#ffffff",
     },
@@ -48,11 +48,11 @@ export const darkTheme = {
     },
     fontFamilies: {
         headings: 'Playfair Display, serif',
-        secondary: "'Merriweather', Georgia, Serif",
+        secondary: 'monospace',
         body: '-apple-system, BlinkMacSystemFont, sans-serif'
     },
     options: {
         max_layout_width: '1250px',
-        layout_padding: '50px'
+        layout_padding: '60px'
     }
 }

@@ -8,8 +8,6 @@ import { largerThan, smallerThan } from '../../helpers/mediaQueries';
 import Tag from '../library/Tag';
 
 const Wrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
 
     ${smallerThan.mobile`
         display: block;
@@ -19,8 +17,7 @@ const Wrapper = styled.div`
 const RenderPost = styled.div`
     cursor: pointer;
     flex-grow: 1;
-    width: 50%;
-    padding-right: 30px;
+    width: 100%;
     padding-bottom: 60px;
 
     ${smallerThan.mobile`

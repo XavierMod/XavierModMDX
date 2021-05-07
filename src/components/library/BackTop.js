@@ -10,8 +10,9 @@ const BackTopWrapper = styled.div`
 
 const Button = styled.div`
     padding: 8px;
-    background-color: ${props => props.theme.colors.text};
+    background-color: ${props => props.theme.colors.accent};
     cursor: pointer;
+    border-radius: 5px;
     transition: all ease .3s;
     opacity: ${props => props.show ? '1' : '0'};
 

@@ -5,7 +5,8 @@ import CirclesShape from '../library/shapes/CirclesShape';
 import BigCircleShape from '../library/shapes/BigCircleShape';
 import LineShape from '../library/shapes/LineShape';
 import PostsPreview from './PostsPreview';
-import {A, H2} from '../text/TextStyles';
+import {A, H1, H2} from '../text/TextStyles';
+import JournalSVG from '../../images/journal.svg';
 
 const Wrapper = styled.div`
     margin: 80px 0;
@@ -27,16 +28,16 @@ const ButtonsHeader = styled.div`
     
 `;
 
+const JournalImage = styled.div`
+`;
+
 const LandingLatestPosts = (props) => {
     return (
         <Wrapper>
             <Header>
                 <TitleHeader>
-                    <H2>Journal</H2>
+                    <H1>Journal</H1>
                 </TitleHeader>
-                <ButtonsHeader>
-                    {/*<A>All posts</A> */}
-                </ButtonsHeader>
             </Header>
             <PostsPreview {...props} />
         </Wrapper>

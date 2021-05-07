@@ -12,6 +12,7 @@
     "@mdx-js/react": "^1.6.21",
     "babel-plugin-styled-components": "^1.12.0",
     "browser-monads": "^1.0.0",
+    "chart.js": "^2.9.4",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-fontawesome-css": "^1.0.0",
@@ -30,10 +31,13 @@
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-chartjs-2": "^2.11.1",
     "react-darkmode-toggler": "^1.2.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "react-slick": "^0.28.0",
     "react-snakke": "^1.2.3",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {

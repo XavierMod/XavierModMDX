@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 130px;
 
 
     ${smallerThan.mobile`

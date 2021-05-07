@@ -37,7 +37,6 @@ const TagWrapper = styled.span`
 
     &.completed {
         background: #defcde;
-        border: 1px solid #1e9c1e;
         color: #1e9c1e;
     }
 
@@ -47,9 +46,8 @@ const TagWrapper = styled.span`
     }
 
     &.isDark {
-        background: black;
+        background: #1a1c24;
         color: ${props => props.theme.colors.accent};
-        border: 1px solid ${props => props.theme.colors.mainBG};
     }
 `;
 

@@ -7,6 +7,7 @@ import Landing from "../components/Landing"
 import { DarkModeToggler } from "react-darkmode-toggler"
 import {lightTheme, darkTheme} from '../theme/theme';
 import styled, { ThemeProvider } from 'styled-components'
+import FixedLayout from "../layouts/FixedLayout/FixedLayout"
 
 const IndexPage = ({data}) => {
   const posts = data.posts.nodes;
@@ -14,20 +15,20 @@ const IndexPage = ({data}) => {
 
   const testObject = {
     landing_title: "Front-End Developer & UX/UI",
-    landing_role: "Pinfluencer.io",
+    landing_role: "Tui Interactive Media",
     landing_role_link: "https://pinfluencer.io/",
     landing_stack: "JavaScript · React · Vue · Node",
-    landing_description: "👋 I'm Xavier Mod. Junior/Mid Front-End Dev with UX/UI. Based in London."
+    landing_description: "👋 I'm Xavier Mod. Junior/Mid Front-End Dev with UX/UI. Based in London. Open to full-time roles from March/April 2021."
   }
   
   return (
-      <Layout>
+      <FixedLayout>
         <SEO title="Home" />
         <Landing 
           markdownData={testObject}
           posts={posts}
           projects={projects} />
-      </Layout>
+      </FixedLayout>
   )
 }
 

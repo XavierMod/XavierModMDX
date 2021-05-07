@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 const Logo = () => {
     const data = useStaticQuery(graphql`
         query {
-            placeholderImage: file(relativePath: { eq: "xmod-photo-xmas.png" }) {
+            placeholderImage: file(relativePath: { eq: "xmod-photo.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 1800) {
                         ...GatsbyImageSharpFluid_noBase64

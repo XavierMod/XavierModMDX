@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from 'react';
 import styled from 'styled-components'
 import Layout from "../layouts/layout"
 import SEO from "../components/seo"
@@ -9,6 +9,7 @@ import PostImage from "../components/blog/PostImage"
 import Img from 'gatsby-image'
 import PostLayout from '../layouts/post-layout';
 import PostFooter from "../components/blog/PostFooter"
+import Chart from 'chart.js';
 
 const Wrapper = styled.div`
   padding-top: 40px;

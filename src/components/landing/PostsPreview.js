@@ -8,7 +8,6 @@ import { largerThan, smallerThan } from '../../helpers/mediaQueries';
 import Tag from '../library/Tag';
 
 const Wrapper = styled.div`
-
 `;
 
 const Line = styled.div`
@@ -16,6 +15,7 @@ const Line = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     padding-bottom: 60px;
+    max-width: 700px;
 
     ${smallerThan.mobile`
       display: block;
@@ -24,6 +24,9 @@ const Line = styled.div`
 
 const RenderPost = styled.div`
     cursor: pointer;
+    margin-right: 40px;
+    flex: 3;
+    margin-bottom: 50px;
 
     &:hover {
         .gatsby-image-wrapper {
@@ -37,25 +40,10 @@ const RenderPost = styled.div`
     
     .gatsby-image-wrapper {
         transition: all ease .3s;
-        height: 330px;
+        height: 100%;
         box-shadow: 0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.23);
-    }
-    &.long {
-        flex: 6;
-        padding-right: 30px;
-
-        ${smallerThan.mobile`
-            padding: 0;
-        `};
-    }
-
-    &.short {
-        flex: 4;
-        padding-left: 30px;
-
-        ${smallerThan.mobile`
-            padding: 0;
-        `};
+        width: 100%;
+        height: 300px;
     }
 
     h3 {
@@ -66,7 +54,6 @@ const RenderPost = styled.div`
     }
 
     ${smallerThan.mobile`
-        margin-bottom: 40px;
     `};
 `;
 
@@ -75,38 +62,18 @@ const PostsPreview = (props) => {
 
     return (
         <Wrapper>
-            <Line>
-                {props.posts.map((el, ind, arr) => {
-                    if (ind == '0' || ind == '1') {
-                        return (
-                            <RenderPost className={ind == '0' ? 'long' : 'short'}>
-                                <Link to={`/post/${props.posts[ind].frontmatter.slug}`}>
-                                    <Img fluid={props.posts[ind].frontmatter.image.childImageSharp.fluid} />
-                                    <H3 className="title">{props.posts[ind].frontmatter.title}</H3>
-                                    <PDesc>{props.posts[ind].frontmatter.readTime} minutes read</PDesc> · <PDesc>{props.posts[ind].frontmatter.date}</PDesc> · <Tag>{props.posts[ind].frontmatter.category}</Tag>
-                                </Link>
-                            </RenderPost>
-                        )
-                    }
-                })}
-            </Line>
-            <Line>
-                {props.posts.map((el, ind, arr) => {
-                    if (ind == '2' || ind == '3') {
-                        return (
-                            <RenderPost className={ind == '2' ? 'long' : 'short'}>
-                                <Link to={`/post/${props.posts[ind].frontmatter.slug}`}>
-                                    <Img fluid={props.posts[ind].frontmatter.image.childImageSharp.fluid} />
-                                    <H3 className="title">{props.posts[ind].frontmatter.title}</H3>
-                                    <PDesc>{props.posts[ind].frontmatter.readTime} minutes read</PDesc> · <PDesc>{props.posts[ind].frontmatter.date}</PDesc> · <Tag>{props.posts[ind].frontmatter.category}</Tag>
-                                </Link>
-                            </RenderPost>
-                        )
-                    }
-                })}
-            </Line>
+            {props.posts.map((el, ind, arr) => {
+                return (
+                    <RenderPost>
+                        <Link to={`/post/${props.posts[ind].frontmatter.slug}`}>
+                            <H3 className="title">{props.posts[ind].frontmatter.title}</H3>
+                            <PDesc>{props.posts[ind].frontmatter.readTime} minutes read</PDesc> · <PDesc>{props.posts[ind].frontmatter.date}</PDesc> · <Tag>{props.posts[ind].frontmatter.category}</Tag>
+                        </Link>
+                    </RenderPost>
+                )
+            })}
         </Wrapper>
     )
 }
 
-export default PostsPreview
+export default PostsPreview;

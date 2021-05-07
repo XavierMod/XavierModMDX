@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     */
 
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 
 

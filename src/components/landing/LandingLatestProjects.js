@@ -30,6 +30,12 @@ const ButtonsHeader = styled.div`
     
 `;
 
+const Button = styled.div`
+    border: 4px solid ${props => props.theme.colors.text};
+    padding: 20px;
+    text-transform: uppercase;
+`;
+
 const LandingLatestPosts = (props) => {
     return (
         <Wrapper>
@@ -38,7 +44,7 @@ const LandingLatestPosts = (props) => {
                     <H2>Featured Work</H2>
                 </TitleHeader>
                 <ButtonsHeader>
-                    <Link to="/projects"><A>All work</A></Link>
+                    <Link to="/projects"><Button>All work</Button></Link>
                 </ButtonsHeader>
             </Header>
             <RenderProjects {...props} />
