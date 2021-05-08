@@ -12,6 +12,7 @@ import * as Styles from '../components/text/TextStyles';
 import PostFooter from '../components/blog/PostFooter';
 import Snakke from 'react-snakke'
 import { window, document, exists } from 'browser-monads';
+import Button from '../components/library/Button';
 
 
 const postTemplate = ({data}) => {
@@ -45,7 +46,7 @@ const postTemplate = ({data}) => {
                     <PostFooter />
                     <div style={{margin: '40px 0'}}>
                         <Link to="/">
-                            <Styles.A>Back to all posts</Styles.A>
+                            <Button>All posts</Button>
                         </Link>
                     </div>
                 </PostLayout>

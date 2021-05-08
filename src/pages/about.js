@@ -10,6 +10,7 @@ import Img from 'gatsby-image'
 import PostLayout from '../layouts/post-layout';
 import PostFooter from "../components/blog/PostFooter"
 import Chart from 'chart.js';
+import Button from '../components/library/Button';
 
 const Wrapper = styled.div`
   padding-top: 40px;
@@ -28,8 +29,9 @@ const AboutPage = ({data}) => {
     <Layout>
       <SEO title="About" />
       <Wrapper>
-          <Link to="/"><A>Back</A></Link>
           <PostImage>
+          <Link to="/"><Button>Back</Button></Link>
+
             <Img fluid={aboutPhoto} />
           </PostImage>
           <PostLayout>

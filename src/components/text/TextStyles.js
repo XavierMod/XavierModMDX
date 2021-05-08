@@ -2,6 +2,7 @@ import { window, document, exists } from 'browser-monads';
 import React from 'react'
 import styled from 'styled-components'
 import { myContext } from '../../layouts/provider';
+import WireframeTwo from '../library/wireframes/WireframeTwo';
 
 const H1Wrapper = styled.h1`
     font-size: ${props => props.theme.fontSizes.H1};
@@ -19,6 +20,13 @@ const H2Wrapper = styled.h2`
     font-family: ${props => props.theme.fontFamilies.headings};
     font-weight: 900;
     line-height: 40px;
+    display: flex;
+    align-items: center;
+    
+    .wireframe {
+        width: 50px;
+        margin-right: 10px;
+    }
 `;
 
 const H3Wrapper = styled.h3`
@@ -53,7 +61,6 @@ const H6Wrapper = styled.h6`
 
 const PWrapper = styled.p`
     line-height: 35px;
-    opacity: 0.9;
     font-size: ${props => props.theme.fontSizes.paragraph};
     font-family: ${props => props.theme.fontFamilies.body};
     color: ${props => props.theme.colors.accentSecondary};
@@ -144,8 +151,7 @@ const TLDRWrapper = styled.div`
     position: relative;
 
     &.dark {
-        background-color: black !important;
-        border-left: 7px solid white;
+        background-color: #131414 !important;
     }
 
     .tldr {
@@ -191,7 +197,7 @@ export const H2 = (props) => {
     return (
         <myContext.Consumer>
         {context => (
-            <H2Wrapper className={`h2 ${context.isDark ? 'dark' : null}`}>{props.children}</H2Wrapper>
+            <H2Wrapper className={`h2 ${context.isDark ? 'dark' : null}`}><WireframeTwo />{props.children}</H2Wrapper>
         )}
         </myContext.Consumer>
     )
@@ -237,7 +243,10 @@ export const P = (props) => {
     return (
         <myContext.Consumer>
         {context => (
-            <PWrapper className={`p ${context.isDark ? 'dark' : null}`}>{props.children}</PWrapper>
+            <PWrapper 
+            data-sal="slide-up"
+            data-sal-delay="100"
+            data-sal-easing="ease" className={`p ${context.isDark ? 'dark' : null}`}>{props.children}</PWrapper>
         )}
         </myContext.Consumer>
     )

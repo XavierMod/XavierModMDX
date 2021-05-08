@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import styled from 'styled-components'
 import "slick-carousel/slick/slick.css"; 
 import ProjectBlock from "./ProjectBlock";
+import Video from "../library/Video";
 
 const MainWrapper = styled.div`
     position: absolute;

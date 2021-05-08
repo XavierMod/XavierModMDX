@@ -22,6 +22,8 @@ import {myContext} from './provider'
 import ReadingIndicator from "../components/library/ReadingIndicator";
 import BackTop from "../components/library/BackTop";
 import MobileBar from "../components/library/MobileBar";
+import Cursor from "../services/Cursor";
+import HeaderFixedLayout from "./FixedLayout/HeaderFixedLayout"
 
 const LayoutWrapper = styled.div`
   max-width: ${props => props.theme.options.max_layout_width};
@@ -79,7 +81,7 @@ const Layout = ({children}) => {
           <GlobalStyle />
             <LayoutWrapper>
               <ChildrenWrapper>
-                <Header />
+              <HeaderFixedLayout context={context} />
                   {children}
                 <Footer />
               </ChildrenWrapper>

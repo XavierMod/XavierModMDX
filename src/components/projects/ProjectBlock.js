@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components';
 import Tag from '../library/Tag';
 import { H1, HTitle } from '../text/TextStyles';
+import Img from "gatsby-image"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Wrapper = styled.div`
     position: relative;
@@ -33,6 +35,7 @@ const Image = styled.div`
     transition: all ease .5s;
     background-repeat: no-repeat;
     background-position: center; 
+    opacity: 0.5;
 `;
 
 const Center = styled.div`
@@ -44,16 +47,10 @@ const Center = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-`;
 
-const Footer = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 30px !important;
-    width: 100%;
-    margin: 40px;
-    z-index: 1000;
+    h1 {
+        font-size: 60px;
+    }
 `;
 
 const ProjectBlock = (props) => {
@@ -61,21 +58,21 @@ const ProjectBlock = (props) => {
 
     useEffect(() => {
         console.log(isCurrent);
+        console.log(props.data);
         props.slideNumber === props.currentSlide ? setCurrent(true) : setCurrent(false)
     }, []);
 
     return (
-        <Wrapper>
-            <Center>
-                <HTitle>{props.data.frontmatter.title}</HTitle>
-            </Center>
-            <Footer>
-                <Tag>react</Tag>
-                <Tag>react</Tag>
-                <Tag>react</Tag>
-            </Footer>
-            <Image className="Image" isCurrent={isCurrent} src="https://picsum.photos/1200/1300" />
-        </Wrapper>
+        <AniLink cover to={`/project/${props.data.frontmatter.slug}`} bg="#663399">
+            <Wrapper>
+                <Center>
+                    <HTitle>{props.data.frontmatter.title}</HTitle>
+                </Center>
+                <Image>
+                    <Img className="Image" isCurrent={isCurrent} fluid={props.data.frontmatter.image.childImageSharp.fluid} />
+                </Image>
+            </Wrapper>
+        </AniLink>
     )
 }
 

@@ -1,5 +1,7 @@
+import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
+import Button from '../library/Button';
 import Logo from '../library/Logo';
 
 const Wrapper = styled.div`
@@ -13,12 +15,18 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1000;
+
+    .logo {
+        filter: invert();
+    }
 `;
 
 const ProjectsTop = () => {
     return (
         <Wrapper>
-            <Logo />
+            <Link to="/">
+                <Button>Back to home</Button>
+            </Link>
         </Wrapper>
     )
 }

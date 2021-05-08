@@ -1,25 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from "gatsby-image"
-import {HTitle, H3, PDesc, A} from '../text/TextStyles';
+import {HTitle, H3, PDesc, A, H1} from '../text/TextStyles';
 import PostCategory from '../blog/PostCategory';
 import { Link } from 'gatsby';
 import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 import Tag from '../library/Tag';
 
 const Wrapper = styled.div`
-`;
+    padding: 30px 0;
 
-const Line = styled.div`
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-bottom: 60px;
-    max-width: 700px;
-
-    ${smallerThan.mobile`
-      display: block;
-    `};
+    .title {
+        opacity: 0.5;
+    }
 `;
 
 const RenderPost = styled.div`
@@ -28,7 +21,12 @@ const RenderPost = styled.div`
     flex: 3;
     margin-bottom: 50px;
 
+    opacity: 0.5;
+    transition: all ease .4s;
+
     &:hover {
+        opacity: 1;
+
         .gatsby-image-wrapper {
             box-shadow: 0 30px 60px -10px rgba(0,0,0,0.35), 0 18px 36px -18px rgba(0,0,0,0.35);
         }
@@ -54,6 +52,13 @@ const RenderPost = styled.div`
     }
 
     ${smallerThan.mobile`
+        margin: 0;
+        margin-bottom: 30px;
+
+        h1 { 
+            font-size: 30px; 
+            line-height: 40px;
+        }
     `};
 `;
 
@@ -66,7 +71,7 @@ const PostsPreview = (props) => {
                 return (
                     <RenderPost>
                         <Link to={`/post/${props.posts[ind].frontmatter.slug}`}>
-                            <H3 className="title">{props.posts[ind].frontmatter.title}</H3>
+                            <H1 className="title">{props.posts[ind].frontmatter.title}</H1>
                             <PDesc>{props.posts[ind].frontmatter.readTime} minutes read</PDesc> · <PDesc>{props.posts[ind].frontmatter.date}</PDesc> · <Tag>{props.posts[ind].frontmatter.category}</Tag>
                         </Link>
                     </RenderPost>

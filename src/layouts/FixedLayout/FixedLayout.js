@@ -14,18 +14,17 @@ import MobileBar from "../../components/library/MobileBar";
 import HeaderFixedLayout from "./HeaderFixedLayout";
 
 const LayoutWrapper = styled.div`
-  max-width: ${props => props.theme.options.max_layout_width};
   margin: auto;
-  padding: ${props => props.theme.options.layout_padding};
   display: flex;
+  width: 100%;
 
   ${smallerThan.mobile`
-      padding: 25px;
       display: block;
   `};
 `;
 
 const ChildrenWrapper = styled.div`
+  width: 100%;
 `;
 
 const FixedLayout = ({children}) => {

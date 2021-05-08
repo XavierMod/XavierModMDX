@@ -8,6 +8,7 @@ import { DarkModeToggler } from "react-darkmode-toggler"
 import {lightTheme, darkTheme} from '../theme/theme';
 import styled, { ThemeProvider } from 'styled-components'
 import FixedLayout from "../layouts/FixedLayout/FixedLayout"
+import Cursor from "../services/Cursor"
 
 const IndexPage = ({data}) => {
   const posts = data.posts.nodes;

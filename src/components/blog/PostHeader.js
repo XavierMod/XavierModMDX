@@ -17,6 +17,11 @@ const PostHeaderWrapper = styled.div`
             line-height: 40px !important;
         `};
     }
+
+    h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
 `;
 
 const Subtitle = styled.div`
@@ -34,8 +39,8 @@ const PostHeader = (props) => {
         <myContext.Consumer>
             {context => (
                 <PostHeaderWrapper>
+                    <div style={{marginBottom: '10px'}}><Tag>{props.category}</Tag></div>
                     <H1>{props.text}</H1>
-                    <div style={{marginTop: '10px'}}><Tag>{props.category}</Tag></div>
                     <Subtitle>
                         <Text>
                             <PDesc><span style={{fontWeight: 700}}>By Xavier Mod</span> on {props.date} · {props.readTime} min read</PDesc>

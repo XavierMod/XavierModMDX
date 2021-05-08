@@ -2,45 +2,26 @@ import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { H3, PDesc } from '../text/TextStyles';
+import { H1, H2, H3, H4, PDesc } from '../text/TextStyles';
 import PostCategory from '../blog/PostCategory';
 import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 import Tag from '../library/Tag';
+import Button from '../library/Button';
+import MaxWidthLayout from '../../layouts/MaxWidthLayout';
 
 const Wrapper = styled.div`
-
-    ${smallerThan.mobile`
-        display: block;
-    `};
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 50px;
 `;
 
 const RenderPost = styled.div`
     cursor: pointer;
-    flex-grow: 1;
     width: 100%;
-    padding-bottom: 60px;
-
-    ${smallerThan.mobile`
-        width: 100%;
-        padding: 0;
-        margin-bottom: 30px;
-    `};
-
-    &:hover {
-        .gatsby-image-wrapper {
-            box-shadow: 0 30px 60px -10px rgba(0,0,0,0.35), 0 18px 36px -18px rgba(0,0,0,0.35);
-        }
-
-        h3 {
-            color: ${props => props.theme.colors.accent};
-        }
-    }
+    height: 400px;
+    position: relative;
     
-    .gatsby-image-wrapper {
-        transition: all ease .3s;
-        height: 330px;
-        box-shadow: 0 30px 60px -10px rgba(0,0,0,0.3), 0 18px 36px -18px rgba(0,0,0,0.23);
-    }
     h3 {
         padding-top: 30px;
         font-family: ${props => props.theme.fontFamilies.secondary};
@@ -54,11 +35,33 @@ const RenderPost = styled.div`
 
 `;
 
+const ImageWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .gatsby-image-wrapper {
+        height: inherit;
+        width: inherit;
+        opacity: 0.5;
+    }
+`;
+
 const Text = styled.div`
     ${smallerThan.mobile`
-        background: ${props => props.theme.colors.mainBG_lighter};
         padding: 20px;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.8158508158508159) 0%, rgba(0,0,0,0) 100%);
     `};
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.8158508158508159) 0%, rgba(0,0,0,0) 100%);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
 `;
 
 const ProjectDescription = styled.div`
@@ -72,33 +75,40 @@ const ProjectTags = styled.div`
         font-weight: 500;
         opacity: 0.3 !important;
     }
+
+    h4 {
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        opacity: 0.5;
+        padding-top: 20px;
+    }
 `;
 
 const RenderProjects = (props) => {
     return (
         <Wrapper>
             {props.projects.map((el, ind, arr) => {
-                        return (
+                    return (
+                        <Link to={`/project/${el.frontmatter.slug}`}>
                             <RenderPost>
-                                <Link to={`/project/${el.frontmatter.slug}`}>
-                                    <Img fluid={el.frontmatter.image.childImageSharp.fluid} />
+                                    <ImageWrapper>
+                                        <Img fluid={el.frontmatter.image.childImageSharp.fluid} />
+                                    </ImageWrapper>
                                     <Text>
-                                        <H3 className="title">{el.frontmatter.title}</H3>
-                                        <br />
-                                        {el.frontmatter.tags.split(", ").map((el, ind, arr) => {
-                                                return <Tag className="block">{el}</Tag>
-                                            })}
+                                        <ProjectTags>
+                                            <H4>{el.frontmatter.category}
+                                            </H4>
+                                        </ProjectTags>
+                                        <H2 className="title">{el.frontmatter.title}</H2>
                                         <ProjectDescription>
                                             <PDesc>{el.frontmatter.description}</PDesc>
                                         </ProjectDescription>
-                                        <ProjectTags>
-                                            <PDesc>{el.frontmatter.category}
-                                            </PDesc>
-                                        </ProjectTags>
+                                        <Button>VIEW PROJECT</Button>
                                     </Text>
-                                </Link>
                             </RenderPost>
-                        )
+                        </Link>
+                    )
                 })}
         </Wrapper>
     )

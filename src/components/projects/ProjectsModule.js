@@ -4,6 +4,7 @@ import ProjectsSlider from "./ProjectsSlider"
 import ReadingIndicator from '../library/ReadingIndicator'
 import SliderIndicator from './SliderIndicator';
 import ProjectsTop from './ProjectsTop';
+import Video from '../library/Video';
 
 const PageWrapper = styled.div`
   display: flex;
@@ -14,37 +15,40 @@ const PageWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${props => props.theme.colors.mainBG};
-`;
-
-const LeftBlock = styled.div`
-  flex: 1.5;
+  z-index: -10000;
 `;
 
 const SliderBlock = styled.div`
   position: relative;
   height: 100%;
-  flex: 7;
+  flex: 10;
 `;
 
-const RightBlock = styled.div`
-  flex: 1.5;
+const VideoWrapper = styled.div`
+  position: absolute;
+  top: -85px;
+  left: 0;
+  z-index: -1000;
+  width: 100%;
+  text-align: center;
+
+  video {
+    z-index: -1000;
+  }
 `;
+
 
 const ProjectsModule = (props) => {
     return (
     <PageWrapper>
         <ProjectsTop />
-        <LeftBlock>
-            
-        </LeftBlock>
         <SliderBlock>
           <ProjectsSlider slides={props.slides} />
         </SliderBlock>
-        <RightBlock>
-        adsasd
-        </RightBlock>
         <SliderIndicator />
+        <VideoWrapper>
+          <Video />
+        </VideoWrapper>
       </PageWrapper>
     )
 }

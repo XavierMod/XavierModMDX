@@ -18,7 +18,7 @@ export const lightTheme = {
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'Playfair Display, serif',
+        headings: 'Playfair Display, sans-serif',
         secondary: "Merriweather, Georgia, Serif",
         body: '-apple-system, BlinkMacSystemFont, sans-serif'
     },
@@ -29,7 +29,8 @@ export const lightTheme = {
 }
 export const darkTheme = {
     colors: {
-        mainBG: '#0f0f0f',
+        mainBG: '#000000',
+        mainBG_2: '#131313',
         mainBG_lighter: '#1D2129',
         text: "#ffffff",
         accent: "#dbdbdb",
@@ -47,8 +48,8 @@ export const darkTheme = {
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'Playfair Display, serif',
-        secondary: 'monospace',
+        headings: 'Italiana, serif',
+        secondary: "Merriweather, Georgia, Serif",
         body: '-apple-system, BlinkMacSystemFont, sans-serif'
     },
     options: {
