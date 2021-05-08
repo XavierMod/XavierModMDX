@@ -5,41 +5,62 @@ import CirclesShape from '../library/shapes/CirclesShape';
 import BigCircleShape from '../library/shapes/BigCircleShape';
 import LineShape from '../library/shapes/LineShape';
 import PostsPreview from './PostsPreview';
-import {A, H2} from '../text/TextStyles';
+import {A, H1, H2} from '../text/TextStyles';
+import JournalSVG from '../../images/journal.svg';
+import MaxWidthLayout from '../../layouts/MaxWidthLayout';
+import WireframeOne from '../library/wireframes/WireframeOne';
+import WireframeTwo from '../library/wireframes/WireframeTwo';
+import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 
 const Wrapper = styled.div`
-    margin: 80px 0;
     position: relative;
+    text-align: center;
+    margin: 20px;
+
+    .w1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .w2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 `;
 
 const Header = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 70px;
+
+    ${smallerThan.mobile`
+          .w1, .w2 {
+              width: 20px;
+          }
+    `};
 `;
 
 const TitleHeader = styled.div`
     flex: 7;
-`;
-
-const ButtonsHeader = styled.div`
-    
+    margin: 30px 0;
 `;
 
 const LandingLatestPosts = (props) => {
     return (
-        <Wrapper>
-            <Header>
-                <TitleHeader>
-                    <H2>Journal</H2>
-                </TitleHeader>
-                <ButtonsHeader>
-                    {/*<A>All posts</A> */}
-                </ButtonsHeader>
-            </Header>
-            <PostsPreview {...props} />
-        </Wrapper>
+        <MaxWidthLayout>
+            <Wrapper>
+                <Header>
+                    <WireframeOne delay="700" />
+                    <WireframeTwo delay="1000" />
+                    <TitleHeader>
+                        <H1>Journal</H1>
+                    </TitleHeader>
+                </Header>
+                <PostsPreview {...props} />
+            </Wrapper>
+        </MaxWidthLayout>
     )
 }
 

@@ -15,7 +15,10 @@ const Wrapper = styled.div`
 
 const LandingAboutPreview = (props) => {
     return (
-        <Wrapper>
+        <Wrapper 
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease">
             <P>{props.landing_description}</P>
             <Link to="/about"><ButtonPrimary>About me</ButtonPrimary></Link>
         </Wrapper>

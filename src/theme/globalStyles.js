@@ -7,12 +7,21 @@ const GlobalStyle = createGlobalStyle`
     */
 
    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 
 
     * {
         box-sizing: border-box;
+        cursor: none;
     }
+
+    html,body {
+  cursor: none
+}html *,body * {
+  cursor: none;
+}
 
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,7 +58,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: 'Playfair Display';
         font-weight: 700;
     }
 

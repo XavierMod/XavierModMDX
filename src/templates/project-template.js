@@ -12,6 +12,7 @@ import * as Styles from '../components/text/TextStyles';
 import ProjectHeader from '../components/projects/ProjectHeader';
 import PostFooter from '../components/blog/PostFooter';
 import { window, document, exists } from 'browser-monads';
+import Button from '../components/library/Button';
 
 const AgeWarningNotice = styled.div`
     background: #ffe6e6;
@@ -75,7 +76,7 @@ const postTemplate = ({data}) => {
                     <PostFooter />
                     <div style={{margin: '40px 0'}}>
                         <Link to="/">
-                            <Styles.A>Back to all projects</Styles.A>
+                            <Button>All projects</Button>
                         </Link>
                     </div>
                 </PostLayout>

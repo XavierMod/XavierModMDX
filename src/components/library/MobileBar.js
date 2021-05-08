@@ -37,7 +37,7 @@ const BarWrapper = styled.div`
     padding: 5px;
 
     .logo {
-        width: 40px;
+        width: 50px;
     }
 
     &.isDark {

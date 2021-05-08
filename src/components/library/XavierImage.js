@@ -4,13 +4,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-    width: 60px;
+    width: 100px;
 `;
 
 const Logo = () => {
     const data = useStaticQuery(graphql`
         query {
-            placeholderImage: file(relativePath: { eq: "xmod-photo-xmas.png" }) {
+            placeholderImage: file(relativePath: { eq: "xmod-photo.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 1800) {
                         ...GatsbyImageSharpFluid_noBase64

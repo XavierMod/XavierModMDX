@@ -9,6 +9,8 @@ import {A, H2} from '../text/TextStyles';
 import ProjectsPreview from './ProjectsPreview';
 import { Link } from 'gatsby';
 import RenderProjects from '../projects/RenderProjects';
+import MaxWidthLayout from '../../layouts/MaxWidthLayout';
+import Button from '../library/Button';
 
 const Wrapper = styled.div`
     margin: 80px 0;
@@ -16,9 +18,8 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
     padding-bottom: 70px;
 `;
 
@@ -27,22 +28,22 @@ const TitleHeader = styled.div`
 `;
 
 const ButtonsHeader = styled.div`
-    
+    text-align: right;
 `;
 
 const LandingLatestPosts = (props) => {
     return (
-        <Wrapper>
+        <MaxWidthLayout>
             <Header>
                 <TitleHeader>
                     <H2>Featured Work</H2>
                 </TitleHeader>
                 <ButtonsHeader>
-                    <Link to="/projects"><A>All work</A></Link>
+                <Link to="/projects" ><Button>All work</Button></Link>
                 </ButtonsHeader>
             </Header>
             <RenderProjects {...props} />
-        </Wrapper>
+        </MaxWidthLayout>
     )
 }
 

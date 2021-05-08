@@ -18,21 +18,22 @@ export const lightTheme = {
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'Playfair Display, serif',
+        headings: 'Playfair Display, sans-serif',
         secondary: "Merriweather, Georgia, Serif",
         body: '-apple-system, BlinkMacSystemFont, sans-serif'
     },
     options: {
         max_layout_width: '1250px',
-        layout_padding: '20px'
+        layout_padding: '60px'
     }
 }
 export const darkTheme = {
     colors: {
-        mainBG: '#111217',
+        mainBG: '#000000',
+        mainBG_2: '#131313',
         mainBG_lighter: '#1D2129',
         text: "#ffffff",
-        accent: "#E9DAAC",
+        accent: "#dbdbdb",
         paragraphColor: 'white',
         accentSecondary: "#ffffff",
     },
@@ -47,12 +48,12 @@ export const darkTheme = {
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'Playfair Display, serif',
-        secondary: "'Merriweather', Georgia, Serif",
+        headings: 'Italiana, serif',
+        secondary: "Merriweather, Georgia, Serif",
         body: '-apple-system, BlinkMacSystemFont, sans-serif'
     },
     options: {
         max_layout_width: '1250px',
-        layout_padding: '50px'
+        layout_padding: '60px'
     }
 }

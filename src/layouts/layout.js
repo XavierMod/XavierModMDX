@@ -22,6 +22,8 @@ import {myContext} from './provider'
 import ReadingIndicator from "../components/library/ReadingIndicator";
 import BackTop from "../components/library/BackTop";
 import MobileBar from "../components/library/MobileBar";
+import Cursor from "../services/Cursor";
+import HeaderFixedLayout from "./FixedLayout/HeaderFixedLayout"
 
 const LayoutWrapper = styled.div`
   max-width: ${props => props.theme.options.max_layout_width};
@@ -78,21 +80,8 @@ const Layout = ({children}) => {
         <MDXProvider components={MDXComponents}>
           <GlobalStyle />
             <LayoutWrapper>
-              <LogoWrapper>
-                <LogoWrapperContent>
-                  <Link to="/">
-                    <Logo isDark={context.isDark} />
-                  </Link>
-                  <ReadingWrapper>
-                    <ReadingIndicator />
-                  </ReadingWrapper>
-                  <BackTopWrapper>
-                    <BackTop />
-                  </BackTopWrapper>
-                </LogoWrapperContent>
-              </LogoWrapper>
               <ChildrenWrapper>
-                <Header />
+              <HeaderFixedLayout context={context} />
                   {children}
                 <Footer />
               </ChildrenWrapper>

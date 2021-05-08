@@ -6,6 +6,7 @@ import CrownShape from '../library/shapes/CrownShape';
 import ModeToggler from './ModeToggler';
 import { myContext } from '../../layouts/provider';
 import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
+import WireframeOne from '../../components/library/wireframes/WireframeOne';
 
 const Wrapper = styled.div`
     display: flex;
@@ -33,7 +34,7 @@ const Header = () => {
             {context => (
                 <Wrapper>
                     <LogoFlex>
-                        <CrownShape isDark={context.isDark} />
+                        <WireframeOne />
                     </LogoFlex>
                     <ModeToggler isDark={context.isDark} onClick={() => context.changeTheme()} />
                 </Wrapper>
