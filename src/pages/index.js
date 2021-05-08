@@ -17,8 +17,8 @@ const IndexPage = ({data}) => {
   const testObject = {
     landing_title: "Front-End Developer & UX/UI",
     landing_role: "Tui Interactive Media",
-    landing_role_link: "https://pinfluencer.io/",
-    landing_stack: "JavaScript · React · Vue · Node",
+    landing_role_link: "https://www.tuimedia.com/",
+    landing_stack: "React · Vue · Node · Symfony",
     landing_description: "👋 I'm Xavier Mod. Junior/Mid Front-End Dev with UX/UI. Based in London. Open to full-time roles from March/April 2021."
   }
   

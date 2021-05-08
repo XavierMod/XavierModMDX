@@ -12,8 +12,9 @@ import MaxWidthLayout from '../../layouts/MaxWidthLayout';
 const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50%;
     grid-gap: 50px;
+    overflow: hidden;
+    height: 100%; /* new */
 `;
 
 const RenderPost = styled.div`
@@ -32,7 +33,6 @@ const RenderPost = styled.div`
             padding-bottom: 0;
         `};
     }
-
 `;
 
 const ImageWrapper = styled.div`
@@ -85,6 +85,10 @@ const ProjectTags = styled.div`
     }
 `;
 
+const ButtonWrapper = styled.div`
+    z-index: -10;
+`;
+
 const RenderProjects = (props) => {
     return (
         <Wrapper>
@@ -104,7 +108,9 @@ const RenderProjects = (props) => {
                                         <ProjectDescription>
                                             <PDesc>{el.frontmatter.description}</PDesc>
                                         </ProjectDescription>
-                                        <Button>VIEW PROJECT</Button>
+                                        <ButtonWrapper>
+                                            <Button>VIEW PROJECT</Button>
+                                        </ButtonWrapper>
                                     </Text>
                             </RenderPost>
                         </Link>

@@ -4,16 +4,24 @@ import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import BlankLayout from '../layouts/blankLayout';
 import ProjectsModule from "../components/projects/ProjectsModule"
+import MaxWidthLayout from "../layouts/MaxWidthLayout";
+import Layout from "../layouts/layout";
+
+const Wrapper = styled.div`
+  height: 100vh;
+`;
 
 const Projects = ({data}) => {
 
   console.log(data.frontEndProjects);
 
   return (
-    <BlankLayout>
-      <SEO title="Projects" />
-      <ProjectsModule slides={data.frontEndProjects.nodes} />
-    </BlankLayout>
+    <Wrapper>
+      <BlankLayout>
+          <SEO title="Projects" />
+          <ProjectsModule slides={data.frontEndProjects.nodes} />
+      </BlankLayout>
+    </Wrapper>
   )
 }
 

@@ -9,6 +9,7 @@ import Button from '../library/Button';
 import Video from '../library/Video';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
+import { Link } from 'gatsby';
 
 const Wrapper = styled.div`
     text-align: center;
@@ -26,6 +27,10 @@ const Wrapper = styled.div`
     ${smallerThan.mobile`
           .w1, .w2 {
             width: 50px;
+          }
+
+          .button {
+              width: 90%;
           }
     `};
 `;
@@ -90,7 +95,7 @@ const LandingTop = (props) => {
                 <WireframeOne delay="700" />
                 <WireframeTwo delay="1000" />
                 <ImageWrapper ><XavierImage /></ImageWrapper>
-                <Title>It's Xavier. Front-End Dev with UX/UI. Fan of design systems, Dieter Rams and nice fonts.</Title>
+                <Title>I'm Xavier Mod. Software Developer and Designer, focusing on great web technologies.</Title>
                 <PDesc>Working as a front-end dev at <A href={props.landing_role_link}>{props.landing_role}</A> </PDesc>
                 <Facts>
                     <Fact 
@@ -112,19 +117,13 @@ const LandingTop = (props) => {
                         data-sal-delay="900"
                         data-sal-easing="ease">
                         <H1>Tech Stack</H1>
-                        <PDesc>{props.landing_stack.split(" · ").map((el, ind, arr) => {
-                            return <span>{el} | </span>
-                        })}</PDesc>
+                        <PDesc>Now focusing on {props.landing_stack}</PDesc>
                     </Fact>   
                 </Facts>   
 
-                <AniLink cover
-                        to="/about"
-                        direction="left"
-                        duration={1}
-                        bg="#212120">
+                <Link to="/about">
                     <Button>About me</Button> 
-                </AniLink>
+                </Link>
 
 
                 <VideoWrapper>

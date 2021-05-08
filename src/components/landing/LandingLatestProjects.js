@@ -11,16 +11,33 @@ import { Link } from 'gatsby';
 import RenderProjects from '../projects/RenderProjects';
 import MaxWidthLayout from '../../layouts/MaxWidthLayout';
 import Button from '../library/Button';
+import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 
 const Wrapper = styled.div`
     margin: 80px 0;
     position: relative;
+
+    ${smallerThan.mobile`
+        display: block;
+    `};
 `;
 
 const Header = styled.div`
     display: grid;
     grid-template-columns: auto auto;
     padding-bottom: 70px;
+
+    ${smallerThan.mobile`
+        display: block;
+
+        .button {
+            display: block;
+            width: 90%;
+            text-align: center;
+            margin: auto;
+            margin-top: 45px;
+        }
+    `};
 `;
 
 const TitleHeader = styled.div`

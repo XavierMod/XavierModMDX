@@ -4,6 +4,7 @@ import Tag from '../library/Tag';
 import { H1, HTitle } from '../text/TextStyles';
 import Img from "gatsby-image"
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from 'gatsby';
 
 const Wrapper = styled.div`
     position: relative;
@@ -63,7 +64,7 @@ const ProjectBlock = (props) => {
     }, []);
 
     return (
-        <AniLink cover to={`/project/${props.data.frontmatter.slug}`} bg="#663399">
+        <Link to={`/project/${props.data.frontmatter.slug}`}>
             <Wrapper>
                 <Center>
                     <HTitle>{props.data.frontmatter.title}</HTitle>
@@ -72,7 +73,7 @@ const ProjectBlock = (props) => {
                     <Img className="Image" isCurrent={isCurrent} fluid={props.data.frontmatter.image.childImageSharp.fluid} />
                 </Image>
             </Wrapper>
-        </AniLink>
+        </Link>
     )
 }
 

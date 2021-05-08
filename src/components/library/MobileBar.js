@@ -94,9 +94,6 @@ const MobileBar = () => {
                         </LogoWrapper>
                         <TagWrapper>
                         </TagWrapper>
-                        <ToggleWrapper>
-                            <ModeToggler isDark={context.isDark} onClick={() => context.changeTheme()} />
-                        </ToggleWrapper>
                         <BackTopWrapper>
                             <BackTop />
                         </BackTopWrapper>

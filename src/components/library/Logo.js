@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { window, document, exists } from 'browser-monads';
 
@@ -35,7 +35,7 @@ const Logo = (props) => {
         return <div>Picture not found</div>
     }
 
-    return <Wrapper className={`logo ${props.isDark ? 'dark' : null}`}><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Wrapper>
+    return <Link to="/"><Wrapper className={`logo ${props.isDark ? 'dark' : null}`}><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Wrapper></Link>
 }
 
 export default Logo

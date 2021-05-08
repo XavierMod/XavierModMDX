@@ -11,6 +11,7 @@ import PostLayout from '../layouts/post-layout';
 import PostFooter from "../components/blog/PostFooter"
 import Chart from 'chart.js';
 import Button from '../components/library/Button';
+import FixedLayout from '../layouts/FixedLayout/FixedLayout';
 
 const Wrapper = styled.div`
   padding-top: 40px;

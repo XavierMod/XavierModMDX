@@ -5,6 +5,7 @@ import ReadingIndicator from '../library/ReadingIndicator'
 import SliderIndicator from './SliderIndicator';
 import ProjectsTop from './ProjectsTop';
 import Video from '../library/Video';
+import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 
 const PageWrapper = styled.div`
   display: flex;
@@ -15,7 +16,8 @@ const PageWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -10000;
+  pointer-events: all;
+  z-index: 10000;
 `;
 
 const SliderBlock = styled.div`
@@ -31,6 +33,10 @@ const VideoWrapper = styled.div`
   z-index: -1000;
   width: 100%;
   text-align: center;
+
+  ${smallerThan.mobile`
+      display: none;
+  `};
 
   video {
     z-index: -1000;

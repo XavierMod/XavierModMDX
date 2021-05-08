@@ -6,10 +6,6 @@ const GlobalStyle = createGlobalStyle`
     License: none (public domain)
     */
 
-   @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&display=swap');
-   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-   @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
-
 
 
     * {

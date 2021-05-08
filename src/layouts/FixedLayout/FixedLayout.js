@@ -12,6 +12,7 @@ import MDXComponents from '../../helpers/MDXComponents';
 import {myContext} from '../provider'
 import MobileBar from "../../components/library/MobileBar";
 import HeaderFixedLayout from "./HeaderFixedLayout";
+import CursorLayout from "../CursorLayout";
 
 const LayoutWrapper = styled.div`
   margin: auto;
@@ -20,6 +21,7 @@ const LayoutWrapper = styled.div`
 
   ${smallerThan.mobile`
       display: block;
+      padding: 0;
   `};
 `;
 
@@ -30,23 +32,25 @@ const ChildrenWrapper = styled.div`
 const FixedLayout = ({children}) => {
 
   return (
-    <myContext.Consumer>
-      {context => (
-        <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
-        <MDXProvider components={MDXComponents}>
-          <GlobalStyle />
-          <HeaderFixedLayout context={context} />
-            <LayoutWrapper>
-              <ChildrenWrapper>
-                  {children}
-                <Footer />
-              </ChildrenWrapper>
-              <MobileBar />
-            </LayoutWrapper>
-          </MDXProvider>
-        </ThemeProvider>
-      )}
-      </myContext.Consumer>
+    <CursorLayout>
+      <myContext.Consumer>
+        {context => (
+          <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
+          <MDXProvider components={MDXComponents}>
+            <GlobalStyle />
+            <HeaderFixedLayout context={context} />
+              <LayoutWrapper>
+                <ChildrenWrapper>
+                    {children}
+                  <Footer />
+                </ChildrenWrapper>
+                <MobileBar />
+              </LayoutWrapper>
+            </MDXProvider>
+          </ThemeProvider>
+        )}
+        </myContext.Consumer>
+      </CursorLayout>
   )
 }
 

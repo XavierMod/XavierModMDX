@@ -24,6 +24,7 @@ import BackTop from "../components/library/BackTop";
 import MobileBar from "../components/library/MobileBar";
 import Cursor from "../services/Cursor";
 import HeaderFixedLayout from "./FixedLayout/HeaderFixedLayout"
+import CursorLayout from "./CursorLayout";
 
 const LayoutWrapper = styled.div`
   max-width: ${props => props.theme.options.max_layout_width};
@@ -74,23 +75,26 @@ const BackTopWrapper = styled.div`
 const Layout = ({children}) => {
 
   return (
-    <myContext.Consumer>
-      {context => (
-        <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
-        <MDXProvider components={MDXComponents}>
-          <GlobalStyle />
-            <LayoutWrapper>
-              <ChildrenWrapper>
-              <HeaderFixedLayout context={context} />
-                  {children}
-                <Footer />
-              </ChildrenWrapper>
-              <MobileBar />
-            </LayoutWrapper>
-          </MDXProvider>
-        </ThemeProvider>
-      )}
-      </myContext.Consumer>
+    <CursorLayout>
+      <myContext.Consumer>
+        {context => (
+          <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
+          <Cursor />
+          <MDXProvider components={MDXComponents}>
+            <GlobalStyle />
+              <LayoutWrapper>
+                <ChildrenWrapper>
+                <HeaderFixedLayout context={context} />
+                    {children}
+                  <Footer />
+                </ChildrenWrapper>
+                <MobileBar />
+              </LayoutWrapper>
+            </MDXProvider>
+          </ThemeProvider>
+        )}
+        </myContext.Consumer>
+      </CursorLayout>
   )
 }
 

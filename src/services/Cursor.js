@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
-import { myContext } from '../layouts/provider';
+import { window, document } from 'browser-monads';
 
 const CursorWrapper = styled.div`
 
     .cursor {
-        z-index: -10;
+        z-index: -100000;
 
         width: 60px;
         height: 60px;
@@ -28,12 +28,7 @@ const CursorWrapper = styled.div`
             -moz-transition: all 100ms ease; 
         }
 
-        border: 3px solid black;
-
-        &.isDark {
-          border: 3px solid white;
-        }
-
+        border: 3px solid white;
     }
 `;
 
@@ -82,6 +77,7 @@ const Cursor = () => {
   
       const mLeave = () => {
         setHidden(true);
+        console.log('mouse leaving');
       };
   
       const mEnter = () => {
@@ -94,24 +90,21 @@ const Cursor = () => {
   
   
     return (
-        <myContext.Consumer>
-            {context => (
-                  <CursorWrapper>
-                  <div
-                className={
-                  'cursor ' +
-                  (hidden ? 'c--hidden ' : ' ') + 
-                  (click ? 'c--click ' : ' ') +
-                  (context.isDark ? 'isDark' : ' ')
-                }
-                style={{
-                  left: `${position.x}px`,
-                  top: `${position.y}px`,
-                }}
-              />
-              </CursorWrapper>
-            )}
-        </myContext.Consumer>
+
+      <CursorWrapper>
+          <div
+        className={
+          'cursor ' +
+          (hidden ? 'c--hidden ' : ' ') + 
+          (click ? 'c--click ' : ' ')
+        }
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      />
+      </CursorWrapper>
+
     );
   };
   

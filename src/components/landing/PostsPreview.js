@@ -19,7 +19,7 @@ const RenderPost = styled.div`
     cursor: pointer;
     margin-right: 40px;
     flex: 3;
-    margin-bottom: 50px;
+    margin-bottom: 60px !important;
 
     opacity: 0.5;
     transition: all ease .4s;

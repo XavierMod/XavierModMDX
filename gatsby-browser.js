@@ -13,8 +13,16 @@ export const wrapRootElement = ({ element }) => {
 
     return (
         <Provider>
-            <Cursor />
             {element}
         </Provider>
     )
+}
+
+export const onRouteUpdate = ({ location, prevLocation }) => {
+    console.log("new pathname", location.pathname)
+    console.log("old pathname", prevLocation ? prevLocation.pathname : null)
+  }
+
+export const onClientEntry = () => {
+    console.log("We've started!");
 }

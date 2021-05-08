@@ -13,7 +13,6 @@ const LandingBG = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 680px;
     opacity: 0.2;
     z-index: -1;
 

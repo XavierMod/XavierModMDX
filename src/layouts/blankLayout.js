@@ -5,20 +5,23 @@ import GlobalStyle from '../theme/globalStyles';
 import { MDXProvider } from '@mdx-js/react'
 import MDXComponents from '../../src/helpers/MDXComponents';
 import {myContext} from './provider'
+import CursorLayout from "./CursorLayout";
 
 const Layout = ({children}) => {
 
   return (
-    <myContext.Consumer>
-      {context => (
-        <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
-        <MDXProvider components={MDXComponents}>
-          <GlobalStyle />
-            {children}
-          </MDXProvider>
-        </ThemeProvider>
-      )}
-      </myContext.Consumer>
+    <CursorLayout>
+      <myContext.Consumer>
+        {context => (
+          <ThemeProvider theme={context.isDark ? darkTheme : lightTheme}>
+          <MDXProvider components={MDXComponents}>
+            <GlobalStyle />
+              {children}
+            </MDXProvider>
+          </ThemeProvider>
+        )}
+        </myContext.Consumer>
+      </CursorLayout>
   )
 }
 
