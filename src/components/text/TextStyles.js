@@ -6,8 +6,8 @@ import WireframeTwo from '../library/wireframes/WireframeTwo';
 
 const H1Wrapper = styled.h1`
     font-size: ${props => props.theme.fontSizes.H1};
-    font-family: ${props => props.theme.fontFamilies.headings};
-    font-weight: 900;
+    font-family: ${props => props.theme.fontFamilies.paragraph};
+    font-weight: 7700;
     line-height: 70px;
 `;
 
@@ -66,7 +66,7 @@ const PWrapper = styled.p`
     color: ${props => props.theme.colors.accentSecondary};
 
     code {
-        background-color: #f2f2f2;
+        background-color: black;
         padding: 5px;
         font-family: Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
         font-size: 14px;
@@ -149,6 +149,11 @@ const TLDRWrapper = styled.div`
     background-color: #f2f2f2 !important;
     border-left: 7px solid black;
     position: relative;
+
+    h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
 
     &.dark {
         background-color: #131414 !important;
@@ -292,7 +297,7 @@ export const TLDR = (props) => {
     return (
         <myContext.Consumer>
         {context => (
-            <TLDRWrapper className={`tldr ${context.isDark ? 'dark' : null}`}><H4>TL;DR</H4><PDesc>{props.children}</PDesc></TLDRWrapper>
+            <TLDRWrapper className={`tldr ${context.isDark ? 'dark' : null}`}><h3>TL;DR</h3><PDesc>{props.children}</PDesc></TLDRWrapper>
         )}
         </myContext.Consumer>
     )

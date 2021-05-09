@@ -88,6 +88,44 @@ const VideoWrapper = styled.div`
     }
 `;
 
+const TextEffect = styled.div`
+    h1{
+	margin: 0 15px;
+	line-height: .7;
+	text-shadow: 0 0 2px rgba(0, 0, 0, .45);
+	animation: span 3s ease-in infinite alternate;
+    font-family: inherit;
+}
+.main{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.letter{
+	display: inline-flex;
+	height: 30px;
+	width: 27px;
+	/* border: 2.5px solid #FF1EAD; */
+	border: 2.35px solid black;
+	border-radius: 14px;
+	box-shadow:
+		0 0 2px rgba(0, 0, 0, .75),
+		inset 0 0 2px rgba(0, 0, 0, .45);
+
+	animation: letter 3s ease-in-out infinite alternate;
+}
+@keyframes span {
+	0%,30%{ margin: 0 15px; }
+	70%,100%{ margin: 0 5px; }
+}
+@keyframes letter {
+	0%,30%{ width: 27px; }
+	70%,100%{ width: 30vw; }
+}
+`;
+
+
+
 const LandingTop = (props) => {
     return (
         <Wrapper>
@@ -95,7 +133,7 @@ const LandingTop = (props) => {
                 <WireframeOne delay="700" />
                 <WireframeTwo delay="1000" />
                 <ImageWrapper ><XavierImage /></ImageWrapper>
-                <Title>I'm Xavier Mod. Software Developer and Designer, focusing on great web technologies.</Title>
+                <Title class="black-lives-matter">I'm Xavier Mod. Software Developer and Designer, focusing on great web technologies.</Title>
                 <PDesc>Working as a front-end dev at <A href={props.landing_role_link}>{props.landing_role}</A> </PDesc>
                 <Facts>
                     <Fact 
@@ -124,8 +162,7 @@ const LandingTop = (props) => {
                 <Link to="/about">
                     <Button>About me</Button> 
                 </Link>
-
-
+                
                 <VideoWrapper>
                     <Video />
                 </VideoWrapper>
