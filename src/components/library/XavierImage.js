@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const Wrapper = styled.div`
-    width: 100px;
+    width: 135px;
 `;
 
 const Logo = () => {
