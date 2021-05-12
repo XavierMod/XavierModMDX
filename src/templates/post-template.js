@@ -28,6 +28,7 @@ const postTemplate = ({data}) => {
         <Layout>
             <article>
                 <PostLayout>
+                    <div style={{marginBottom: '30px'}} onClick={() => window.history.go(-1)}><Button>Go back</Button></div>
                     <PostHeader 
                         text={title}
                         date={date}

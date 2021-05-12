@@ -6,7 +6,6 @@ const Wrapper = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    border: 1px solid red;
     padding: 20px;
     z-index: 10;
 `;

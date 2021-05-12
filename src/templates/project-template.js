@@ -58,6 +58,7 @@ const postTemplate = ({data}) => {
         <Layout>
             <article>
                 <PostLayout>
+                    <div style={{marginBottom: '30px'}} onClick={() => window.history.go(-1)}><Button>Go back</Button></div>
                 <ProjectHeader {...data.mdx.frontmatter}/>
                 {ageWarning ? <AgeWarningNotice className="age">This project is out of date. I have improved since I made it.</AgeWarningNotice> : null}
                 </PostLayout>

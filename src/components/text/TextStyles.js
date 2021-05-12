@@ -65,6 +65,10 @@ const PWrapper = styled.p`
     font-family: ${props => props.theme.fontFamilies.body};
     color: ${props => props.theme.colors.accentSecondary};
 
+    .gatsby-resp-image-wrapper {
+        max-width: 100% !important;
+    }
+
     code {
         background-color: black;
         padding: 5px;
