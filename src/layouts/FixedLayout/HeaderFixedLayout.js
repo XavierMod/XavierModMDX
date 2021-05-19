@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
+import FullScreen from '../../components/library/FullScreen';
 import Logo from '../../components/library/Logo';
 import ModeToggler from '../../components/library/ModeToggler';
 import SocialIcon from '../../components/library/SocialIcon';
@@ -71,6 +72,7 @@ const FooterFixedLayout = (props) => {
                     <SocialIcon link="https://github.com/XavierMod">
                         <img height="25" width="25" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" />
                     </SocialIcon>
+                    <FullScreen />
                 </FlexRight>
             </Wrapper>
         </MaxWidthLayout>

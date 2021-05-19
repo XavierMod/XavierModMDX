@@ -9,6 +9,7 @@ import {lightTheme, darkTheme} from '../theme/theme';
 import styled, { ThemeProvider } from 'styled-components'
 import FixedLayout from "../layouts/FixedLayout/FixedLayout"
 import Cursor from "../services/Cursor"
+import { window, document, exists } from 'browser-monads';
 
 const IndexPage = ({data}) => {
   const posts = data.posts.nodes;
