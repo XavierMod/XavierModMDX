@@ -7,7 +7,7 @@
 // You can delete this file if you're not using it
 import React from 'react'
 import Provider from './src/layouts/provider';
-import Cursor from './src/services/Cursor';
+import MDXComponents from './src/helpers/MDXComponents';
 
 export const wrapRootElement = ({ element }) => {
 
