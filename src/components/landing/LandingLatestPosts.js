@@ -92,11 +92,11 @@ const LandingLatestPosts = (props) => {
                     <WireframeOne delay="700" />
                     <WireframeTwo delay="1000" />
                     <TextEffect>
-                        <div class="main">
+                        <div className="main">
                             <h1>M</h1>
                             <h1 style={{paddingRight: '30px'}}>Y</h1>
                             <h1>J</h1>
-                            <h1 class="letter"></h1>
+                            <h1 className="letter"></h1>
                             <h1>U</h1>
                             <h1>R</h1>
                             <h1>N</h1>

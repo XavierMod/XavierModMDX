@@ -29,7 +29,7 @@ const Wrapper = styled.a`
 const Button = (props) => {
     return (
     <Wrapper>
-        <div class="button button_slide slide_right">{props.children}</div>
+        <div className="button button_slide slide_right">{props.children}</div>
     </Wrapper>
     )
 }
