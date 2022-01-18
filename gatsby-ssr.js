@@ -8,7 +8,7 @@ import FixedLayout from "./src/layouts/FixedLayout/FixedLayout"
 export const wrapRootElement = ({ element }) => {
   return (
     <Provider>
-      <FixedLayout>{element}</FixedLayout>
+      {element}
     </Provider>
   )
 }
