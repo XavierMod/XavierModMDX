@@ -1,82 +1,113 @@
-import { Link } from 'gatsby';
-import React, { useState, useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import FullScreen from '../../components/library/FullScreen';
-import Logo from '../../components/library/Logo';
-import ModeToggler from '../../components/library/ModeToggler';
-import SocialIcon from '../../components/library/SocialIcon';
-import Video from '../../components/library/Video';
-import { A } from '../../components/text/TextStyles';
-import MaxWidthLayout from '../MaxWidthLayout';
+import { Link } from "gatsby"
+import React, { useState, useEffect, useRef } from "react"
+import styled from "styled-components"
+import FullScreen from "../../components/library/FullScreen"
+import Logo from "../../components/library/Logo"
+import ModeToggler from "../../components/library/ModeToggler"
+import SocialIcon from "../../components/library/SocialIcon"
+import Video from "../../components/library/Video"
+import { A } from "../../components/text/TextStyles"
+import MaxWidthLayout from "../MaxWidthLayout"
+import Icon from "react-eva-icons"
+import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 
 const Wrapper = styled.div`
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    text-align: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  &.show {
+    display: none;
+  }
+`
+
+const FlexLeft = styled.div`
+  flex: 5;
+  text-align: left;
+`
+
+const FlexRight = styled.ul`
+  flex: 5;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  li {
+    margin-left: 40px;
+    opacity: 0.6;
+    border-bottom: 2px dotted transparent;
+    font-family: ${props => props.theme.fontFamilies.body} !important;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-    padding: 20px;
-    background-color: ${props => props.theme.colors.mainBG_2};
 
-    &.show {
-        display: none;
+    svg {
+        margin-right: 10px;
     }
-`;
 
-const FlexLeft = styled.div`
-    flex: 5;
-    text-align: left;
-`;
+    &:hover {
+      opacity: 0.9;
+      transition: all ease 0.3s;
+    }
+  }
 
-const FlexRight = styled.div`
-    flex: 5;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-`;
+  ${smallerThan.mobile`
+      margin-right: 15px;
+  `};
+`
 
-const FooterFixedLayout = (props) => {
-    const [show, setShow] = useState(false);
+const FooterFixedLayout = props => {
+  const [show, setShow] = useState(false)
 
-    const scrollListener = (target) => {
-        console.log(window.scrollY)
-        if (window.scrollY  > 500) {
-            setShow(true);
-        } else {
-            setShow(false);
-        }
-    };
+  const scrollListener = target => {
+    console.log(window.scrollY)
+    if (window.scrollY > 500) {
+      setShow(true)
+    } else {
+      setShow(false)
+    }
+  }
 
-    useEffect(() => {
-        window.addEventListener("scroll", scrollListener);
-        return () => window.removeEventListener("scroll", scrollListener);
-    });
+  useEffect(() => {
+    window.addEventListener("scroll", scrollListener)
+    return () => window.removeEventListener("scroll", scrollListener)
+  })
 
-
-    return (
-        <MaxWidthLayout>
-            <Wrapper className={`${show ? 'show' : null}`}>
-                <FlexLeft>
-                    <Logo isDark={props.context.isDark} />
-                </FlexLeft>
-                <FlexRight>
-                    <SocialIcon link="https://www.linkedin.com/in/xavier-mod-22a25964/">
-                        <img height="25" width="25" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/linkedin.svg" />
-                    </SocialIcon>
-                    <SocialIcon link="https://github.com/XavierMod">
-                        <img height="25" width="25" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/github.svg" />
-                    </SocialIcon>
-                    <FullScreen />
-                </FlexRight>
-            </Wrapper>
-        </MaxWidthLayout>
-    )
+  return (
+    <MaxWidthLayout>
+      <Wrapper className={`${show ? "show" : null}`}>
+        <FlexLeft>
+          <Logo isDark={props.context.isDark} />
+        </FlexLeft>
+        <FlexRight>
+          <Link to="/menu">
+            <li>
+              <Icon
+                name="keypad-outline"
+                size="large" // small, medium, large, xlarge
+                color="red"
+                animation={{
+                  type: "pulse", // zoom, pulse, shake, flip
+                  hover: true,
+                  infinite: false,
+                }}
+              />
+              Menu
+            </li>
+          </Link>
+        </FlexRight>
+      </Wrapper>
+    </MaxWidthLayout>
+  )
 }
 
 export default FooterFixedLayout

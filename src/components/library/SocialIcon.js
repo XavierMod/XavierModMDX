@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react'
 import styled from 'styled-components'
+import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 
 const Wrapper = styled.div`
     opacity: 0.5;
@@ -15,6 +16,11 @@ const Wrapper = styled.div`
     img {
         filter: invert();
     }
+
+    ${smallerThan.mobile`
+        margin-left: 0;
+        margin: 0 10px;
+    `};
 `;
 
 const SocialIcon = ({link, children}) => {

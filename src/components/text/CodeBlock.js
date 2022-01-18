@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const CodeBlockWrapper = styled.div`
     pre {
         padding: 30px;
-        background-color: #000829 !important;
+        background-color: #070a3b !important;
         border-radius: 5px;
         position: relative;
         overflow: auto;

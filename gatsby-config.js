@@ -22,13 +22,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/src/projects`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `info`,
         path: `${__dirname}/src/info`,
       },
@@ -63,6 +56,8 @@ module.exports = {
       options: {
         fonts: [
           `playfair display\:300,400,700,900`,
+          `poppins\:100,300,400,500`,
+          `manrope\:100,300,400,500,600`,
           `source sans pro\:300,400,400i,700`,
           `merriweather\:300,700,900`,
           `italiana\:400`,

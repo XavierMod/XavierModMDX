@@ -44,7 +44,6 @@ const FixedLayout = ({children}) => {
                     {children}
                   <Footer />
                 </ChildrenWrapper>
-                <MobileBar />
               </LayoutWrapper>
             </MDXProvider>
           </ThemeProvider>

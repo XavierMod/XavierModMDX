@@ -4,21 +4,14 @@ import Layout from "../layouts/layout"
 import SEO from "../components/seo"
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { A } from "../components/text/TextStyles"
 import PostImage from "../components/blog/PostImage"
 import Img from 'gatsby-image'
 import PostLayout from '../layouts/post-layout';
 import PostFooter from "../components/blog/PostFooter"
-import Chart from 'chart.js';
-import Button from '../components/library/Button';
-import FixedLayout from '../layouts/FixedLayout/FixedLayout';
 
 const Wrapper = styled.div`
-  padding-top: 40px;
-
   .gatsby-image-wrapper {
     height: 300px;
-    margin: 30px 0;
   }
 `;
 
@@ -31,8 +24,6 @@ const AboutPage = ({data}) => {
       <SEO title="About" />
       <Wrapper>
           <PostImage>
-          <Link to="/"><Button>Back</Button></Link>
-
             <Img fluid={aboutPhoto} />
           </PostImage>
           <PostLayout>
@@ -51,7 +42,7 @@ export const query = graphql`
     aboutBody: mdx(frontmatter: {type: {eq: "about"}}) {
       body
     }
-    aboutPhoto: file(name: {eq: "xmod-about"}) {
+    aboutPhoto: file(name: {eq: "about-me"}) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

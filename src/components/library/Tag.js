@@ -6,9 +6,8 @@ const TagWrapper = styled.span`
     display: inline-block;
     text-transform: lowercase;
     background-color: #ededed;
-    padding: 8px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     color: grey;
     margin-right: 10px;
 
@@ -56,7 +55,7 @@ const Tag = (props) => {
             <myContext.Consumer>
                 {context => (
                     <TagWrapper className={`${props.className} ${context.isDark ? 'isDark' : null}`}>
-                        {props.children}
+                        #{props.children}
                     </TagWrapper>
                 )}
             </myContext.Consumer>

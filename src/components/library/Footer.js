@@ -6,7 +6,6 @@ import SocialIcon from '../library/SocialIcon';
 import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
 
 const Wrapper = styled.div`
-    border-top: 1px dotted #d9d9d9;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -29,12 +28,18 @@ const Left = styled.div`
     color: white;
 
     * {
-        font-size: 13px  !important;
+        font-size: 17px  !important;
     }
 
     .logo {
         width: 16px;
     }
+
+    ${smallerThan.mobile`
+        * {
+            font-size: 16px  !important;
+        }
+    `};
 `;
 
 const Right = styled.div`
@@ -51,7 +56,7 @@ const Footer = () => {
         <MaxWidthLayout>
             <Wrapper>
                 <Left>
-                    <P>Crafted with ❤️ by <A href="https://www.linkedin.com/in/xavier-mod-22a25964/">Xavier Mod</A> © CC BY 2.0</P>
+                    <P>Crafted with ❤️ by <A href="https://www.linkedin.com/in/xavier-mod-22a25964/">Xavier Mod</A></P>
                 </Left>
                 <Right className="right">
                     <SocialIcon link="https://github.com/XavierMod"><img height="25" width="25" src="https://unpkg.com/simple-icons@v4/icons/github.svg" /></SocialIcon>

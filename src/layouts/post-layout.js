@@ -7,12 +7,16 @@
 
 import React from "react"
 import styled, { ThemeProvider } from 'styled-components'
-import Layout from "./layout";
+import { largerThan, smallerThan } from "../helpers/mediaQueries"
 
 const Wrapper = styled.div`
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
   padding-top: 30px;
+
+  ${smallerThan.mobile`
+      padding: 20px;
+  `};
 `;
 
 const PostLayout = ({children}) => {

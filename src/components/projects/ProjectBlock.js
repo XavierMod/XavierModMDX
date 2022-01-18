@@ -70,7 +70,7 @@ const ProjectBlock = (props) => {
                     <HTitle>{props.data.frontmatter.title}</HTitle>
                 </Center>
                 <Image>
-                    <Img className="Image" isCurrent={isCurrent} fluid={props.data.frontmatter.image.childImageSharp.fluid} />
+                    <Img className="Image" fluid={props.data.frontmatter.image.childImageSharp.fluid} />
                 </Image>
             </Wrapper>
         </Link>
