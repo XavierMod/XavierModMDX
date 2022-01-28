@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 import React from 'react'
+import ReactDOM from 'react-dom';
 import Provider from './src/layouts/provider';
 import MDXComponents from './src/helpers/MDXComponents';
 
@@ -17,10 +18,10 @@ export const wrapRootElement = ({ element }) => {
     )
 }
 
-export const wrapPageElement = ({ element }) => {
-    return (
-        <Provider>
-            {element}
-        </Provider>
-    )
-}
+
+export function replaceHydrateFunction() {
+    return (element, container, callback) => {
+      ReactDOM.render(element, container, callback)
+    }
+  }
+  

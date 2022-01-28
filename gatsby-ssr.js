@@ -6,17 +6,5 @@ import MDXComponents from "./src/helpers/MDXComponents"
 import FixedLayout from "./src/layouts/FixedLayout/FixedLayout"
 
 export const wrapRootElement = ({ element }) => {
-  return (
-    <Provider>
-      {element}
-    </Provider>
-  )
-}
-
-export const wrapPageElement = ({ element }) => {
-    return (
-        <Provider>
-            {element}
-        </Provider>
-    )
+  return <Provider>{element}</Provider>
 }
