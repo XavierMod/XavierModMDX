@@ -12,3 +12,11 @@ export const wrapRootElement = ({ element }) => {
     </Provider>
   )
 }
+
+export const wrapPageElement = ({ element }) => {
+    return (
+        <Provider>
+            {element}
+        </Provider>
+    )
+}

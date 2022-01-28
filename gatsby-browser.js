@@ -1,0 +1,26 @@
+/**
+ * Implement Gatsby's Browser APIs in this file.
+ *
+ * See: https://www.gatsbyjs.com/docs/browser-apis/
+ */
+
+// You can delete this file if you're not using it
+import React from 'react'
+import Provider from './src/layouts/provider';
+import MDXComponents from './src/helpers/MDXComponents';
+
+export const wrapRootElement = ({ element }) => {
+    return (
+        <Provider>
+            {element}
+        </Provider>
+    )
+}
+
+export const wrapPageElement = ({ element }) => {
+    return (
+        <Provider>
+            {element}
+        </Provider>
+    )
+}
