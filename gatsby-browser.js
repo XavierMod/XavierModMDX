@@ -18,7 +18,7 @@ export const wrapRootElement = ({ element }) => {
     )
 }
 
-
+// This fixes the bug i've had for a fucking year -- https://stackoverflow.com/questions/62945943/styles-disappear-on-page-reload-using-gatsbyjs-and-material-ui
 export function replaceHydrateFunction() {
     return (element, container, callback) => {
       ReactDOM.render(element, container, callback)

@@ -24,14 +24,11 @@ const ReadingWrapper = styled.div`
 const BackgroundColor = styled.div`
   background: #18191f;
   width: 100%;
-  height: 50%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1000000;
-  border-radius: 0 0 100px 0;
-  overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
 
   .w1 {
     position: absolute;

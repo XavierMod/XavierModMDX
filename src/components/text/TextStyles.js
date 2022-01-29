@@ -293,16 +293,6 @@ export const A = props => {
           target="_blank"
         >
           {props.children}
-          <Icon
-            name="external-link-outline"
-            size="large" // small, medium, large, xlarge
-            color="red"
-            animation={{
-              type: "pulse", // zoom, pulse, shake, flip
-              hover: true,
-              infinite: false,
-            }}
-          />
         </AWrapper>
       )}
     </myContext.Consumer>
