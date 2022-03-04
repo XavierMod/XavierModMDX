@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react"
-import Layout from "../layouts/layout"
+import styled from "styled-components"
 import SEO from "../components/seo"
 
 import { graphql } from "gatsby"
 import Landing from "../components/Landing"
-import { DarkModeToggler } from "react-darkmode-toggler"
-import { lightTheme, darkTheme } from "../theme/theme"
-import styled, { ThemeProvider } from "styled-components"
-import FixedLayout from "../layouts/FixedLayout/FixedLayout"
-import Cursor from "../services/Cursor"
-import { window, document, exists } from "browser-monads"
+import BlankLayout from "../layouts/blankLayout"
+
+const Wrapper = styled.div`
+  background: black;
+`;
 
 const IndexPage = ({ data }) => {
   const posts = data.posts.nodes
@@ -23,10 +22,10 @@ const IndexPage = ({ data }) => {
   }
 
   return (
-    <FixedLayout>
+    <BlankLayout>
       <SEO title="Home" />
       <Landing markdownData={testObject} posts={posts} />
-    </FixedLayout>
+    </BlankLayout>
   )
 }
 

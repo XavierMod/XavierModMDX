@@ -22,7 +22,6 @@ const ReadingWrapper = styled.div`
 `
 
 const BackgroundColor = styled.div`
-  background: #18191f;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -71,10 +70,6 @@ const postTemplate = ({ data }) => {
         <ReadingProgress />
       </ReadingWrapper>
       <article>
-        <BackgroundColor>
-          <WireframeOne delay="1000" />
-          <WireframeTwo delay="1000" />
-        </BackgroundColor>
         <PostLayout>
           <PostHeader
             text={title}

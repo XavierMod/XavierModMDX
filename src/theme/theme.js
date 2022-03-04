@@ -30,7 +30,7 @@ export const lightTheme = {
 export const darkTheme = {
     colors: {
         mainBG: '#000000',
-        mainBG_2: '#17191E',
+        mainBG_2: '#000000',
         mainBG_lighter: '#1D2129',
         text: "#ffffff",
         accent: "#dbdbdb",
@@ -48,9 +48,9 @@ export const darkTheme = {
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'Italiana, serif',
-        secondary: "Merriweather, Georgia, Serif",
-        body: 'manrope, -apple-system, BlinkMacSystemFont, sans-serif'
+        headings: 'NeueMontrealRegular, serif',
+        secondary: "NeueMontrealRegular, Georgia, Serif",
+        body: 'NeueMontrealRegular, -apple-system, BlinkMacSystemFont, sans-serif'
     },
     options: {
         max_layout_width: '1250px',

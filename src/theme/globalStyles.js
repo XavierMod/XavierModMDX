@@ -68,9 +68,10 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         line-height: 1;
-        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: NeueMontrealRegular, -apple-system, BlinkMacSystemFont, sans-serif;
         background: ${props => props.theme.colors.mainBG};
         color: ${props => props.theme.colors.text};
+        letter-spacing: 0px;
     }
     ol, ul {
         list-style: none;

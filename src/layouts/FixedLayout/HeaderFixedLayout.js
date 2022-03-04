@@ -88,23 +88,6 @@ const FooterFixedLayout = props => {
         <FlexLeft>
           <Logo isDark={props.context.isDark} />
         </FlexLeft>
-        <FlexRight>
-          <Link to="/menu">
-            <li>
-              <Icon
-                name="keypad-outline"
-                size="large" // small, medium, large, xlarge
-                color="red"
-                animation={{
-                  type: "pulse", // zoom, pulse, shake, flip
-                  hover: true,
-                  infinite: false,
-                }}
-              />
-              Menu
-            </li>
-          </Link>
-        </FlexRight>
       </Wrapper>
     </MaxWidthLayout>
   )

@@ -1,3 +1,34 @@
-.black-lives-matter {
+@font-face {
+  font-family: NeueMontrealBold;
+  src: url("./fonts/NeueMontreal-Bold.otf") format("opentype");
+}
 
-  }
+@font-face {
+  font-family: NeueMontrealBoldItalic;
+  src: url("./fonts/NeueMontreal-BoldItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NeueMontrealItalic;
+  src: url("./fonts/NeueMontreal-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NeueMontrealLight;
+  src: url("./fonts/NeueMontreal-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NeueMontrealLightItalic;
+  src: url("./fonts/NeueMontreal-LightItalic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NeueMontrealMedium;
+  src: url("./fonts/NeueMontreal-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: NeueMontrealRegular;
+  src: url("./fonts/NeueMontreal-Regular.otf") format("opentype");
+}
