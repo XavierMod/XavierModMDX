@@ -8,6 +8,9 @@ const { Anime, stagger } = ReactAnime
 
 const Wrapper = styled.div`
   padding: 0.6vw;
+  ${smallerThan.mobile`
+       padding: 4vw;
+  `};
 `
 
 const HeaderWrapper = styled.div`
@@ -52,6 +55,10 @@ const Description = styled.div`
 
 const Group = styled.div`
   margin-bottom: 8vw;
+  ${smallerThan.mobile`
+       margin-bottom: 25vw;
+  `};
+  
 `
 
 const Subtitle = styled.h3`
@@ -80,6 +87,8 @@ const FreelanceRow = styled.div`
        display: block;
        font-size: 8vw;
        border-bottom: 0.7vw solid white;
+       margin-top: 3vw;
+       padding-bottom: 3vw;
   `};
 
   &.split {
@@ -318,7 +327,7 @@ const Landing = props => {
             </Subtitle>
             <InfoAbout>
               25 y/o Software Developer. Based in London. I love to make things,
-              in and outside work. Really interested in handcrafted digital
+              inside and outside of work. Really interested in handcrafted digital
               experiences, user experience, human-computer interaction and
               design.
             </InfoAbout>
