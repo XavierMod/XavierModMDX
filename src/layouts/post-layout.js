@@ -10,7 +10,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import { largerThan, smallerThan } from "../helpers/mediaQueries"
 
 const Wrapper = styled.div`
-  max-width: 750px;
+  max-width: 850px;
   margin: auto;
   padding-top: 30px;
 

@@ -18,7 +18,7 @@ export const lightTheme = {
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'Playfair Display, sans-serif',
+        headings: 'Press Start 2P, serif',
         secondary: "Merriweather, Georgia, Serif",
         body: 'Poppins, -apple-system, BlinkMacSystemFont, sans-serif'
     },
@@ -41,14 +41,14 @@ export const darkTheme = {
         HTitle: '75px',
         H1: '45px',
         H2: '30px',
-        H3: '25px',
+        H3: '19px',
         H4: '22px',
         H5: '20px',
         H6: '17px',
         paragraph: '17px'
     },
     fontFamilies: {
-        headings: 'NeueMontrealRegular, serif',
+        headings: 'Press Start 2P, serif',
         secondary: "NeueMontrealRegular, Georgia, Serif",
         body: 'NeueMontrealRegular, -apple-system, BlinkMacSystemFont, sans-serif'
     },

@@ -5,18 +5,18 @@ import Icon from 'react-eva-icons';
 
 const H1Wrapper = styled.h1`
   font-size: ${props => props.theme.fontSizes.H1};
-  font-family: ${props => props.theme.fontFamilies.body} !important;
+  font-family: ${props => props.theme.fontFamilies.headings};
   font-weight: 7700;
-  line-height: 70px;
+  font-family: 'Press Start 2P', serif;
 `
 
 const HTitleWrapper = styled(H1Wrapper)`
-  font-size: ${props => props.theme.fontSizes.HTitle};
+  font-family: ${props => props.theme.fontFamilies.headings};
 `
 
 const H2Wrapper = styled.h2`
   font-size: ${props => props.theme.fontSizes.H2};
-  font-family: ${props => props.theme.fontFamilies.body};
+  font-family: 'Press Start 2P', serif;  
   font-weight: 500;
   line-height: 40px;
   display: flex;
@@ -25,7 +25,7 @@ const H2Wrapper = styled.h2`
 
 const H3Wrapper = styled.h3`
   font-size: ${props => props.theme.fontSizes.H3};
-  font-family: ${props => props.theme.fontFamilies.headings};
+  font-family: 'Press Start 2P', serif;
   font-weight: 900;
   line-height: 40px;
 `
@@ -54,8 +54,8 @@ const H6Wrapper = styled.h6`
 // Paragraphs
 
 const PWrapper = styled.p`
-  line-height: 30px;
-  font-size: 20px;
+  line-height: 35px;
+  font-size: 25px;
   font-family: ${props => props.theme.fontFamilies.body};
   color: ${props => props.theme.colors.accentSecondary};
   letter-spacing: 0.5px;
@@ -66,9 +66,10 @@ const PWrapper = styled.p`
   }
 
   strong {
-    background: ${props => props.theme.colors.accentSecondary};
     font-weight: 700;
     padding: 0 5px;
+    font-family: 'Press Start 2P', serif;
+    font-size: 15px;
   }
 
   code {

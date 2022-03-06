@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { window, document, exists } from 'browser-monads';
+import { H2 } from '../text/TextStyles';
 
 const Wrapper = styled.div`
     width: 45px;
@@ -35,7 +36,7 @@ const Logo = (props) => {
         return <div>Picture not found</div>
     }
 
-    return <Link to="/"><Wrapper className={`logo ${props.isDark ? 'dark' : null}`}><Img fluid={data.placeholderImage.childImageSharp.fluid} /></Wrapper></Link>
+    return <Link to="/"><H2>Xavier Mod</H2></Link>
 }
 
 export default Logo

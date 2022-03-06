@@ -61,6 +61,7 @@ module.exports = {
           `source sans pro\:300,400,400i,700`,
           `merriweather\:300,700,900`,
           `italiana\:400`,
+          `press start 2p\:400`,
           `goudy bookletter 1911\:400`
            // you can also specify font weights and styles
         ],

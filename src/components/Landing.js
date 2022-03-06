@@ -3,6 +3,7 @@ import styled from "styled-components"
 import ReactAnime from "react-animejs"
 import { largerThan, smallerThan } from "../helpers/mediaQueries"
 import { Link } from "gatsby"
+import Logo from "./library/Logo"
 
 const { Anime, stagger } = ReactAnime
 
@@ -22,8 +23,7 @@ const HeaderWrapper = styled.div`
 `
 
 const Name = styled.div`
-  font-style: italic;
-  font-size: 4vw;
+  font-size: 2.3vw;
 
   ${smallerThan.mobile`
        font-size: 7vw;
@@ -58,12 +58,12 @@ const Group = styled.div`
   ${smallerThan.mobile`
        margin-bottom: 25vw;
   `};
-  
 `
 
 const Subtitle = styled.h3`
-  font-size: 1.8vw;
+  font-size: 1.4vw;
   margin-bottom: 2.2vw;
+  font-family: 'Press Start 2P', serif; 
 
   ${smallerThan.mobile`
        font-size: 4.5vw;
@@ -78,7 +78,7 @@ const FreelanceRow = styled.div`
   grid-template-columns: 0.6fr 2fr 0.4fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  font-size: 3.8vw;
+  font-size: 2.3vw;
   border-bottom: 0.2vw solid white;
   padding-bottom: 1.4vw;
   margin-top: 1vw;
@@ -235,7 +235,7 @@ const Landing = props => {
   return (
     <Wrapper>
       <HeaderWrapper>
-        <Name>XAVIER MOD</Name>
+        <Logo />
         <Position>
           <div style={{ marginBottom: "2vw" }}>
             Software Developer / Designer
@@ -327,9 +327,9 @@ const Landing = props => {
             </Subtitle>
             <InfoAbout>
               25 y/o Software Developer. Based in London. I love to make things,
-              inside and outside of work. Really interested in handcrafted digital
-              experiences, user experience, human-computer interaction and
-              design.
+              inside and outside of work. Really interested in handcrafted
+              digital experiences, user experience, human-computer interaction
+              and design.
             </InfoAbout>
           </div>
           <div>
@@ -338,19 +338,28 @@ const Landing = props => {
               <FreelanceRow className="split">
                 <Job>Software Dev (Front-End/Mobile)</Job>
                 <Job style={{ textAlign: "right", opacity: 0.4 }}>
-                <Hoverable target="_blank" href="https://www.tuimedia.com/">tuimedia.com</Hoverable> (since 2021)
+                  <Hoverable target="_blank" href="https://www.tuimedia.com/">
+                    tuimedia.com
+                  </Hoverable>{" "}
+                  (since 2021)
                 </Job>
               </FreelanceRow>
               <FreelanceRow className="split">
                 <Job>Front-End Dev</Job>
                 <Job style={{ textAlign: "right", opacity: 0.4 }}>
-                <Hoverable target="_blank" href="https://www.pinfluencer.io/">pinfluencer.io</Hoverable> (2020)
+                  <Hoverable target="_blank" href="https://www.pinfluencer.io/">
+                    pinfluencer.io
+                  </Hoverable>{" "}
+                  (2020)
                 </Job>
               </FreelanceRow>
               <FreelanceRow className="split">
                 <Job>Junior Front-End dev</Job>
                 <Job style={{ textAlign: "right", opacity: 0.4 }}>
-                <Hoverable target="_blank" href="https://karmoon.co.uk/">karmoon.co.uk</Hoverable> (2019)
+                  <Hoverable target="_blank" href="https://karmoon.co.uk/">
+                    karmoon.co.uk
+                  </Hoverable>{" "}
+                  (2019)
                 </Job>
               </FreelanceRow>
               <FreelanceRow className="split">

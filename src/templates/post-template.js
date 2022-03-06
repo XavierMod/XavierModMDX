@@ -78,11 +78,6 @@ const postTemplate = ({ data }) => {
             readTime={readTime}
             category={category}
           />
-          <PostImage>
-            <Img fluid={image.childImageSharp.fluid} />
-          </PostImage>
-        </PostLayout>
-        <PostLayout>
           <PostBody>{body}</PostBody>
           <PostFooter />
         </PostLayout>

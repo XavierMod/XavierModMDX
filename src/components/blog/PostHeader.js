@@ -25,19 +25,11 @@ const PostHeaderWrapper = styled.div`
   `};
 `
 
-const Subtitle = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 30px 0;
-
-  ${smallerThan.mobile`
-    p {
-      font-size: 17px !important;
-    }
-  `};
+const Text = styled.div`
+  font-size: 23px;
+  margin-top: 30px;
+  opacity: 0.5;
 `
-
-const Text = styled.div``
 
 const InfoWrapper = styled.div`
   display: flex;
@@ -54,29 +46,29 @@ const InfoWrapper = styled.div`
   }
 `
 
+const Subtitle = styled.h3`
+  font-size: 23px;
+  margin-bottom: 10px;
+`
+
 const PostHeader = props => {
   return (
     <myContext.Consumer>
       {context => (
         <div>
           <PostHeaderWrapper>
-            <div style={{ marginBottom: "10px" }}>
-              <Tag>{props.category}</Tag>
-            </div>
+            <Subtitle>journal - {props.category}</Subtitle>
             <H1>{props.text}</H1>
             <InfoWrapper>
-              <XavierImage />
               <Subtitle>
                 <Text>
-                  <PDesc>
-                    <span style={{ fontWeight: 700 }}>
-                      By{" "}
-                      <A href="https://www.linkedin.com/in/xavier-mod-22a25964/">
-                        Xavier Mod
-                      </A>
-                    </span>{" "}
-                    on {props.date} · {props.readTime} min read
-                  </PDesc>
+                  <span style={{ fontWeight: 700 }}>
+                    By{" "}
+                    <A href="https://www.linkedin.com/in/xavier-mod-22a25964/">
+                      Xavier Mod
+                    </A>
+                  </span>{" "}
+                  on {props.date} · {props.readTime} min read
                 </Text>
               </Subtitle>
             </InfoWrapper>
