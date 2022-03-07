@@ -8,7 +8,7 @@ export const lightTheme = {
         accentSecondary: "#000000",
     },
     fontSizes: {
-        HTitle: '75px',
+        HTitle: '45px',
         H1: '35px',
         H2: '30px',
         H3: '25px',
@@ -38,8 +38,8 @@ export const darkTheme = {
         accentSecondary: "#006FFF",
     },
     fontSizes: {
-        HTitle: '75px',
-        H1: '45px',
+        HTitle: '45px',
+        H1: '32px',
         H2: '30px',
         H3: '19px',
         H4: '22px',

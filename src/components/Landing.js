@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import ReactAnime from "react-animejs"
 import { largerThan, smallerThan } from "../helpers/mediaQueries"
 import { Link } from "gatsby"
 import Logo from "./library/Logo"
+import MovingText from "./library/MovingText"
 
-const { Anime, stagger } = ReactAnime
 
 const Wrapper = styled.div`
   padding: 0.6vw;
@@ -274,27 +273,7 @@ const Landing = props => {
             <RowYear>2020</RowYear>
           </FreelanceRow>
         </GroupRows>
-        <OpenOpportunities>
-          <Anime
-            initial={[
-              {
-                targets: ".text",
-                translateX: "-100%",
-                duration: 12000,
-                easing: "linear",
-                loop: true,
-              },
-            ]}
-          >
-            <div class="slide-text">
-              <span className="text">open to side freelancing opportunities —</span>
-              <span className="text">open to side freelancing opportunities —</span>
-              <span className="text">open to side freelancing opportunities —</span>
-              <span className="text">open to side freelancing opportunities —</span>
-              <span className="text">open to side freelancing opportunities —</span>
-            </div>
-          </Anime>
-        </OpenOpportunities>
+        <MovingText text="open to side freelancing opportunities —" />
       </Group>
       <Group>
         <Subtitle>journal</Subtitle>

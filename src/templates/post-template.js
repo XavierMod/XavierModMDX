@@ -11,6 +11,7 @@ import WireframeOne from "../components/library/wireframes/WireframeOne"
 import ReadingProgress from "../components/library/ReadingIndicator"
 import Img from "gatsby-image"
 import { largerThan, smallerThan } from "../helpers/mediaQueries"
+import MovingText from "../components/library/MovingText"
 
 const ReadingWrapper = styled.div`
   position: fixed;

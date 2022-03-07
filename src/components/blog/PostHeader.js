@@ -48,7 +48,7 @@ const InfoWrapper = styled.div`
 
 const Subtitle = styled.h3`
   font-size: 23px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `
 
 const PostHeader = props => {
