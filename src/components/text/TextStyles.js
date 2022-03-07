@@ -8,6 +8,7 @@ const H1Wrapper = styled.h1`
   font-family: ${props => props.theme.fontFamilies.headings};
   font-weight: 7700;
   font-family: 'Press Start 2P', serif;
+  line-height: 50px;
 `
 
 const HTitleWrapper = styled(H1Wrapper)`

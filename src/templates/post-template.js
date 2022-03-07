@@ -22,41 +22,6 @@ const ReadingWrapper = styled.div`
   height: 5px;
 `
 
-const BackgroundColor = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1000000;
-
-  .w1 {
-    position: absolute;
-    top: 200px;
-    left: 80px;
-  }
-
-  .w2 {
-    position: absolute;
-    top: 600px;
-    right: 50px;
-  }
-
-  ${smallerThan.mobile`
-      .w1, .w2 {
-        display: none;
-      }
-  `};
-`
-
-const PostImage = styled.div`
-  opacity: 1;
-
-  .gatsby-image-wrapper {
-    height: 300px;
-  }
-`
-
 const postTemplate = ({ data }) => {
   const {
     mdx: {

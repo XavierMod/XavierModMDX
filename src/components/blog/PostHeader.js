@@ -17,8 +17,8 @@ const PostHeaderWrapper = styled.div`
 
   ${smallerThan.mobile`
       h1 {
-        font-size: 42px !important;
-        line-height: 55px !important;
+        font-size: 10vw !important;
+        line-height: 15vw !important;
       }
       
       padding-bottom: 0;

@@ -9,7 +9,7 @@ import Video from "../../components/library/Video"
 import { A } from "../../components/text/TextStyles"
 import MaxWidthLayout from "../MaxWidthLayout"
 import Icon from "react-eva-icons"
-import { largerThan, smallerThan } from '../../helpers/mediaQueries'; 
+import { largerThan, smallerThan } from "../../helpers/mediaQueries"
 
 const Wrapper = styled.div`
   position: relative;
@@ -22,15 +22,33 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 20px;
 
   &.show {
     display: none;
   }
+
+  ${smallerThan.mobile`
+      h2 {
+        font-size: 17px;
+      }
+
+      border-bottom: 1px solid white;
+  `};
 `
 
 const FlexLeft = styled.div`
   flex: 5;
   text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    margin-right: 15px;
+    font-size: 21px;
+    opacity: 0.5;
+  }
 `
 
 const FlexRight = styled.ul`
@@ -51,7 +69,7 @@ const FlexRight = styled.ul`
     justify-content: center;
 
     svg {
-        margin-right: 10px;
+      margin-right: 10px;
     }
 
     &:hover {
@@ -86,6 +104,7 @@ const FooterFixedLayout = props => {
     <MaxWidthLayout>
       <Wrapper className={`${show ? "show" : null}`}>
         <FlexLeft>
+          <span>←</span>
           <Logo isDark={props.context.isDark} />
         </FlexLeft>
       </Wrapper>
