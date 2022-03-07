@@ -287,11 +287,11 @@ const Landing = props => {
             ]}
           >
             <div class="slide-text">
-              <span className="text">open to freelancing opportunities —</span>
-              <span className="text">open to freelancing opportunities —</span>
-              <span className="text">open to freelancing opportunities —</span>
-              <span className="text">open to freelancing opportunities —</span>
-              <span className="text">open to freelancing opportunities —</span>
+              <span className="text">open to side freelancing opportunities —</span>
+              <span className="text">open to side freelancing opportunities —</span>
+              <span className="text">open to side freelancing opportunities —</span>
+              <span className="text">open to side freelancing opportunities —</span>
+              <span className="text">open to side freelancing opportunities —</span>
             </div>
           </Anime>
         </OpenOpportunities>
