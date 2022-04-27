@@ -25,7 +25,18 @@ const ReadingWrapper = styled.div`
 const postTemplate = ({ data }) => {
   const {
     mdx: {
-      frontmatter: { title, category, image, date, readTime, TLDR },
+      frontmatter: {
+        title,
+        category,
+        image,
+        date,
+        readTime,
+        company,
+        areas,
+        technologies,
+        TLDR,
+        privateRepo,
+      },
       body,
     },
   } = data
@@ -41,6 +52,10 @@ const postTemplate = ({ data }) => {
             text={title}
             date={date}
             description={TLDR}
+            company={company}
+            areas={areas}
+            technologies={technologies}
+            privateRepo={privateRepo}
             readTime={readTime}
             category={category}
           />
@@ -62,6 +77,10 @@ export const query = graphql`
         readTime
         slug
         TLDR
+        company
+        technologies
+        areas
+        privateRepo
         image {
           childImageSharp {
             fluid {

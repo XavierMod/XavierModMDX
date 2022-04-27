@@ -245,38 +245,13 @@ const Landing = props => {
               <span>tui media</span>
             </Hoverable>
           </Description>
-          <Description>also freelancing</Description>
         </Position>
       </HeaderWrapper>
+
       <Group>
-        <Subtitle>freelance</Subtitle>
-        <GroupRows>
-          <FreelanceRow>
-            <RowTitle>you</RowTitle>
-            <RowDescription>let’s build something together!</RowDescription>
-            <RowYear>2022</RowYear>
-          </FreelanceRow>
-          <FreelanceRow>
-            <RowTitle target="_blank" href="https://www.obersis.com/">
-              <Hoverable>obersis</Hoverable>
-              <svg
-                fill="white"
-                style={{ opacity: 0.5, marginLeft: "1.3vw" }}
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" />
-              </svg>
-            </RowTitle>
-            <RowDescription>interface design and code</RowDescription>
-            <RowYear>2020</RowYear>
-          </FreelanceRow>
-        </GroupRows>
-        <MovingText text="open to side freelancing opportunities —" />
-      </Group>
-      <Group>
-        <Subtitle>journal</Subtitle>
+        <Subtitle>featured</Subtitle>
+        <MovingText text="Some cool projects I've worked on —" />
+
         <GroupRows>
           {props.posts.map((el, ind) => {
             console.log(el)

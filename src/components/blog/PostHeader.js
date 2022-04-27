@@ -51,7 +51,26 @@ const Subtitle = styled.h3`
   margin-bottom: 20px;
 `
 
+const PrivateRepo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px dotted rgba(255, 255, 255, 0.5);
+  padding: 20px;
+
+  line-height: 30px;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  div {
+    margin: 0;
+  }
+`
+
 const PostHeader = props => {
+  console.log(props)
   return (
     <myContext.Consumer>
       {context => (
@@ -73,6 +92,27 @@ const PostHeader = props => {
               </Subtitle>
             </InfoWrapper>
           </PostHeaderWrapper>
+          {props.privateRepo ? (
+            <PrivateRepo>
+              <div>
+                <svg
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 1l-12 22h24l-12-22zm-1 8h2v7h-2v-7zm1 11.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" />
+                </svg>
+              </div>
+              <Text>
+                I worked on this product while working for {props.company}, and
+                therefore I can't publicly share its full repository. For more
+                information, please contact me.
+              </Text>
+            </PrivateRepo>
+          ) : null}
+          <Text style={{lineHeight: '35px'}}>Technologies used: {props.technologies}</Text>
         </div>
       )}
     </myContext.Consumer>
